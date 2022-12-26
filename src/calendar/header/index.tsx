@@ -292,8 +292,8 @@ const CalendarHeader = forwardRef((props: CalendarHeaderProps, ref) => {
           {renderIndicator()}
         </View>
         {_renderArrow('right')}
-        <View style={{borderBottomWidth: 1, marginLeft: 15, marginRight: 15, borderBottomColor: '#e6ecf6'}} />
       </View>
+      <View style={{borderBottomWidth: 1, marginLeft: 15, marginRight: 15, borderBottomColor: '#e6ecf6'}} />
       {renderDayNames()}
     </View>
   );
