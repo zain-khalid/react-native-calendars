@@ -104,7 +104,7 @@ const CalendarHeader = forwardRef((props: CalendarHeaderProps, ref) => {
     current = '',
     timelineLeftInset
   } = props;
-  
+
   const numberOfDaysCondition = useMemo(() => {
     return numberOfDays && numberOfDays > 1;
   }, [numberOfDays]);
@@ -125,7 +125,7 @@ const CalendarHeader = forwardRef((props: CalendarHeaderProps, ref) => {
         : arrowsHitSlop,
     [arrowsHitSlop]
   );
-  
+
   useImperativeHandle(ref, () => ({
     onPressLeft,
     onPressRight
@@ -226,8 +226,8 @@ const CalendarHeader = forwardRef((props: CalendarHeaderProps, ref) => {
     const shouldDisable = isLeft ? disableArrowLeft : disableArrowRight;
     const onPress = !shouldDisable ? isLeft ? onPressLeft : onPressRight : undefined;
     const imageSource = isLeft ? require('../img/previous.png') : require('../img/next.png');
-    const renderArrowDirection = isLeft ? 'left' : 'right';   
-      
+    const renderArrowDirection = isLeft ? 'left' : 'right';
+
     return (
       <TouchableOpacity
         onPress={onPress}
@@ -292,6 +292,7 @@ const CalendarHeader = forwardRef((props: CalendarHeaderProps, ref) => {
           {renderIndicator()}
         </View>
         {_renderArrow('right')}
+        <View style={{borderBottomWidth: 1, marginLeft: 15, marginRight: 15, borderBottomColor: '#e6ecf6'}} />
       </View>
       {renderDayNames()}
     </View>
